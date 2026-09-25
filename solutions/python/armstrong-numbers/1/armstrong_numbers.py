@@ -1,0 +1,15 @@
+def is_armstrong_number(number):
+    """Returns True/False based on if the given number is an armstrong number"""
+    num_to_string = str(number)
+    str_to_list = list(num_to_string)
+    i = 0
+    total = 0
+    
+    for digit in str_to_list:
+        total = total + (int(str_to_list[i]) ** len(str_to_list))
+        i += 1
+
+    if total == number:
+        return True
+
+    return False
